@@ -1,12 +1,14 @@
+import asyncio
 import json
 import os
 import signal
 import sys
-import threading
+import logging
+
 import requests
 import uvicorn
 from PySide6 import QtWidgets, QtCore
-from PySide6.QtCore import QSettings, Qt
+from PySide6.QtCore import QSettings, Qt, QThread
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import (
     QApplication,
@@ -18,6 +20,7 @@ from PySide6.QtWidgets import (
     QFrame,
     QHBoxLayout
 )
+
 from api.api import api_app
 from config.constant import TableHeaderLabel, Constant
 from config.style import StyleSheet
@@ -31,14 +34,78 @@ from utils.table import TableUtil
 from utils.time import time_relative
 
 ROOTPATH = os.getcwd()
-os.system(
-    f"pyside6-uic {os.path.join(ROOTPATH, 'resources/untitled.ui')} -o {os.path.join(ROOTPATH, 'resources/untitled.py')}"
-)
+# os.system(
+#     f"pyside6-uic {os.path.join(ROOTPATH, 'resources/untitled.ui')} -o {os.path.join(ROOTPATH, 'resources/untitled.py')}"
+# )
 from resources.untitled import Ui_MainWindow
 
 
-def run_api_server():
-    uvicorn.run(api_app, host="127.0.0.1", port=5000)
+class ApiServerThread(QThread):
+    error_occurred = QtCore.Signal(str)  # Signal to emit errors
+
+    def __init__(self):
+        super().__init__()
+        # Configure logging
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            handlers=[logging.StreamHandler()]
+        )
+        
+        # Create a custom logging config for uvicorn
+        log_config = {
+            "version": 1,
+            "disable_existing_loggers": False,
+            "formatters": {
+                "default": {
+                    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+                },
+                "access": {
+                    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+                }
+            },
+            "handlers": {
+                "default": {
+                    "formatter": "default",
+                    "class": "logging.StreamHandler",
+                    "stream": "ext://sys.stderr"
+                },
+                "access": {
+                    "formatter": "access",
+                    "class": "logging.StreamHandler",
+                    "stream": "ext://sys.stdout"
+                }
+            },
+            "loggers": {
+                "uvicorn": {"handlers": ["default"], "level": "INFO"},
+                "uvicorn.error": {"level": "INFO"},
+                "uvicorn.access": {"handlers": ["access"], "level": "INFO", "propagate": False}
+            }
+        }
+        
+        self.config = uvicorn.Config(
+            api_app,
+            host="localhost",
+            port=5000,
+            log_level="info",
+            log_config=log_config
+        )
+        self.server = uvicorn.Server(self.config)
+        self._is_running = True
+
+    def run(self):
+        try:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            while self._is_running:
+                loop.run_until_complete(self.server.serve())
+        except Exception as e:
+            self.error_occurred.emit(str(e))
+
+    def stop(self):
+        self._is_running = False
+        self.server.should_exit = True
+        self.wait()  # Wait for thread to finish
 
 
 BaseModel.metadata.create_all(engine)
@@ -94,8 +161,9 @@ class Application(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.UI.btn_create_new_profile.clicked.connect(self.on_create_profile)
 
-        # Start API server in a separate thread
-        self.api_thread = threading.Thread(target=run_api_server, daemon=True)
+        # Start API server in QThread
+        self.api_thread = ApiServerThread()
+        self.api_thread.error_occurred.connect(self.handle_api_error)
         self.api_thread.start()
 
         self.profile_service = ProfileService()
@@ -252,6 +320,17 @@ class Application(QtWidgets.QMainWindow, Ui_MainWindow):
             tg_action_delete.triggered.connect(function_3)
 
             context_menu.exec(tb_object.viewport().mapToGlobal(pos))
+
+    def handle_api_error(self, error_message):
+        # Handle API server errors here
+        print(f"API Server Error: {error_message}")
+
+    def closeEvent(self, event):
+        # Cleanup when application is closing
+        if hasattr(self, 'api_thread'):
+            self.api_thread.stop()
+        super().closeEvent(event)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)  # Initialize QApplication with sys.argv

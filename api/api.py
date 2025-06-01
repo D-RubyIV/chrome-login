@@ -5,11 +5,9 @@ import random
 import socket
 import string
 import subprocess
-import threading
 import time
-import uuid
 from pathlib import Path
-from typing import Optional, Dict, Any
+from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -19,7 +17,6 @@ from api.proxyAuth import get_extension_folder
 from equipment.alchemy import transactional
 from equipment.models import ProfileRecord
 from service.profile.profileservice import ProfileService
-from utils.model import model_to_dict
 from utils.profile import generate_random_code_with_date
 
 # Constants
@@ -162,7 +159,7 @@ def open_profile(profile_id: str):
                 '--restore-last-session=true',
             ]
 
-            subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=False)
+            subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 
             return {
                 "success": True,
@@ -210,7 +207,7 @@ def create_profile(request: CreateProfileRequest):
         ]
         print(" ".join(cmd))
 
-        process = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=False)
+        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         while not os.path.exists(state_profile_path):
             time.sleep(0.1)
         process.terminate()
