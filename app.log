@@ -1,0 +1,79 @@
+[31m2025-06-01 09:53:33 - my_logger - ERROR - Error in transactional function create_entity: (sqlite3.OperationalError) no such table: accounts
+[SQL: INSERT INTO accounts (name, profile_path, browser_version, raw_proxy, raw_note, is_selected, created_time, updated_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('7997e1ba-d14e-4311-b53d-6a5cbb5c80f5', None, None, '', None, 0, '2025-06-01 09:53:30.000000', '2025-06-01 09:53:30.000000')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)[0m
+[32m2025-06-01 09:53:33 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-01 09:55:12 - my_logger - ERROR - Error in transactional function create_entity: (sqlite3.OperationalError) no such table: accounts
+[SQL: INSERT INTO accounts (name, profile_path, browser_version, raw_proxy, raw_note, is_selected, created_time, updated_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('fcb733cc-71b3-4e4c-875f-6b28d2dddb2f', None, None, '', None, 0, '2025-06-01 09:54:08.000000', '2025-06-01 09:54:08.000000')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)[0m
+[32m2025-06-01 09:55:12 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[32m2025-06-01 16:05:33 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:05:33 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:05:33 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:05:35 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:05:35 - my_logger - INFO - {'name': 'HdFN8iwcCK', 'profile_path': 'dnioxdc8ux-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '6792818b-114c-4b76-8f05-4251321fd5e2', 'created_time': datetime.datetime(2025, 6, 1, 11, 24, 35), 'updated_time': datetime.datetime(2025, 6, 1, 11, 24, 35)}[0m
+[32m2025-06-01 16:05:35 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:05:37 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:05:37 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:05:37 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:05:42 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:05:42 - my_logger - INFO - {'name': 'HdFN8iwcCK', 'profile_path': 'dnioxdc8ux-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '6792818b-114c-4b76-8f05-4251321fd5e2', 'created_time': datetime.datetime(2025, 6, 1, 11, 24, 35), 'updated_time': datetime.datetime(2025, 6, 1, 11, 24, 35)}[0m
+[32m2025-06-01 16:05:42 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:05:43 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:05:43 - my_logger - INFO - {'name': '23kTUwsTfl', 'profile_path': 'e4kdzm5ysn-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '45.249.104.18:6313:iwqrswfg:rrtqdm2z5rar', 'raw_note': '', 'is_selected': False, 'id': '367c77e3-9489-43cf-96ed-e9549adf0c29', 'created_time': datetime.datetime(2025, 6, 1, 11, 22, 59), 'updated_time': datetime.datetime(2025, 6, 1, 15, 49, 25)}[0m
+[32m2025-06-01 16:05:43 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:05:45 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:05:45 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:05:45 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:05:45 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:05:45 - my_logger - INFO - {'name': 'HdFN8iwcCK', 'profile_path': 'dnioxdc8ux-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '6792818b-114c-4b76-8f05-4251321fd5e2', 'created_time': datetime.datetime(2025, 6, 1, 11, 24, 35), 'updated_time': datetime.datetime(2025, 6, 1, 11, 24, 35)}[0m
+[32m2025-06-01 16:05:45 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:05:47 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:05:47 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:05:47 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:05:48 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:05:48 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:05:48 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:05:50 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:05:50 - my_logger - INFO - {'name': 'HdFN8iwcCK', 'profile_path': 'dnioxdc8ux-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '6792818b-114c-4b76-8f05-4251321fd5e2', 'created_time': datetime.datetime(2025, 6, 1, 11, 24, 35), 'updated_time': datetime.datetime(2025, 6, 1, 11, 24, 35)}[0m
+[32m2025-06-01 16:05:50 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:05:51 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:05:51 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:05:51 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:07:19 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:07:19 - my_logger - INFO - {'name': 'HdFN8iwcCK', 'profile_path': 'dnioxdc8ux-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '6792818b-114c-4b76-8f05-4251321fd5e2', 'created_time': datetime.datetime(2025, 6, 1, 11, 24, 35), 'updated_time': datetime.datetime(2025, 6, 1, 11, 24, 35)}[0m
+[32m2025-06-01 16:07:19 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:07:20 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:07:20 - my_logger - INFO - {'name': 'HdFN8iwcCK', 'profile_path': 'dnioxdc8ux-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '6792818b-114c-4b76-8f05-4251321fd5e2', 'created_time': datetime.datetime(2025, 6, 1, 11, 24, 35), 'updated_time': datetime.datetime(2025, 6, 1, 11, 24, 35)}[0m
+[32m2025-06-01 16:07:20 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:10:44 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:10:44 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:10:44 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:11:33 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:11:33 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:11:33 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:11:35 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-01 16:11:35 - my_logger - INFO - {'name': 'WKirGvyBv0', 'profile_path': 'temhsvnist-01062025', 'browser_version': None, 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '85227665-87d7-449d-9752-fbb50c35a2d3', 'created_time': datetime.datetime(2025, 6, 1, 11, 16, 46), 'updated_time': datetime.datetime(2025, 6, 1, 11, 16, 46)}[0m
+[32m2025-06-01 16:11:35 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:14:24 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 16:14:24 - my_logger - INFO - {'name': 'wrOT5pfl5q', 'profile_path': 'onxsazysim-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': 'f5f690a7-4a92-4e15-9102-7c3e264e6db8', 'created_time': datetime.datetime(2025, 6, 1, 16, 12, 12), 'updated_time': datetime.datetime(2025, 6, 1, 16, 12, 12)}[0m
+[32m2025-06-01 16:14:24 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:14:26 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:14:26 - my_logger - INFO - {'name': 'ayN1ACpJyY', 'profile_path': '1tjbjxt2xk-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '730793a0-b868-4a27-8ea7-9ff14cb94c5e', 'created_time': datetime.datetime(2025, 6, 1, 16, 13, 33), 'updated_time': datetime.datetime(2025, 6, 1, 16, 13, 33)}[0m
+[32m2025-06-01 16:14:26 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:14:28 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 16:14:28 - my_logger - INFO - {'name': 'wrOT5pfl5q', 'profile_path': 'onxsazysim-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': 'f5f690a7-4a92-4e15-9102-7c3e264e6db8', 'created_time': datetime.datetime(2025, 6, 1, 16, 12, 12), 'updated_time': datetime.datetime(2025, 6, 1, 16, 12, 12)}[0m
+[32m2025-06-01 16:14:28 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:15:28 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 16:15:28 - my_logger - INFO - {'name': 'wrOT5pfl5q', 'profile_path': 'onxsazysim-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': 'f5f690a7-4a92-4e15-9102-7c3e264e6db8', 'created_time': datetime.datetime(2025, 6, 1, 16, 12, 12), 'updated_time': datetime.datetime(2025, 6, 1, 16, 12, 12)}[0m
+[32m2025-06-01 16:15:28 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 16:15:29 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-01 16:15:29 - my_logger - INFO - {'name': 'wrOT5pfl5q', 'profile_path': 'onxsazysim-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': 'f5f690a7-4a92-4e15-9102-7c3e264e6db8', 'created_time': datetime.datetime(2025, 6, 1, 16, 12, 12), 'updated_time': datetime.datetime(2025, 6, 1, 16, 12, 12)}[0m
+[32m2025-06-01 16:15:29 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:15:30 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 16:15:30 - my_logger - INFO - {'name': 'wrOT5pfl5q', 'profile_path': 'onxsazysim-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': 'f5f690a7-4a92-4e15-9102-7c3e264e6db8', 'created_time': datetime.datetime(2025, 6, 1, 16, 12, 12), 'updated_time': datetime.datetime(2025, 6, 1, 16, 12, 12)}[0m
+[32m2025-06-01 16:15:30 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 16:15:31 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 16:15:31 - my_logger - INFO - {'name': 'wrOT5pfl5q', 'profile_path': 'onxsazysim-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': 'f5f690a7-4a92-4e15-9102-7c3e264e6db8', 'created_time': datetime.datetime(2025, 6, 1, 16, 12, 12), 'updated_time': datetime.datetime(2025, 6, 1, 16, 12, 12)}[0m
+[32m2025-06-01 16:15:31 - my_logger - INFO - {'is_selected': True}[0m
