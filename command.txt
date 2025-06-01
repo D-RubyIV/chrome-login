@@ -1,0 +1,1 @@
+pyarmor gen -O obfdist -r main.py config/ api/ --enable-themida --mix-str --obf-code=2 --enable-jit && pyinstaller --clean main.spec
