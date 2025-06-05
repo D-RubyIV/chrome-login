@@ -17,6 +17,7 @@ from api.proxyAuth import get_extension_folder
 from equipment.alchemy import transactional
 from equipment.models import ProfileRecord
 from service.profile.profileservice import ProfileService
+from utils.chrome import get_chrome_driver_path
 from utils.profile import generate_random_code_with_date
 
 # Constants
@@ -132,7 +133,10 @@ def open_profile(profile_id: str):
             if not os.path.exists(profile_path):
                 raise HTTPException(status_code=404, detail="Profile không tồn tại")
 
-            user_data_dir = os.path.join(CORE_PROFILE_DATA, profile_id)
+            user_data_dir = os.path.join(CORE_PROFILE_DATA, profile_record.profile_path)
+            state_profile_path = os.path.join(user_data_dir, "Local State")
+            full_browser_chrome_version = get_chrome_version(state_path=state_profile_path)
+            _driver_path = get_chrome_driver_path(full_browser_chrome_version=full_browser_chrome_version)
 
             raw_proxy = profile_record.raw_proxy
             folder = ""
@@ -156,16 +160,24 @@ def open_profile(profile_id: str):
                 '--force-device-scale-factor=0.6',
                 f'--user-data-dir={user_data_dir}',
                 f'--profile-directory=Default',
-                '--restore-last-session=true',
+                '--restore-last-session=false'
             ]
 
-            subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            process = subprocess.Popen(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                shell=True,
+                creationflags=subprocess.CREATE_NEW_CONSOLE
+            )
 
             return {
                 "success": True,
                 "data": {
                     "id": profile_id,
-                    "port": port
+                    "remote_debugging_address": f"127.0.0.1:{port}",
+                    "browser_location": profile_path,
+                    "driver_path": _driver_path
                 },
                 "message": "Chrome started successfully"
             }
@@ -207,10 +219,13 @@ def create_profile(request: CreateProfileRequest):
         ]
         print(" ".join(cmd))
 
-        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-        while not os.path.exists(state_profile_path):
+        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+
+        while process.poll() is None:
+            if os.path.exists(state_profile_path):
+                process.kill()
             time.sleep(0.1)
-        process.terminate()
+        print("Kill")
 
         browser_version = get_chrome_version(state_path=state_profile_path)
 

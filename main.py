@@ -51,7 +51,7 @@ class ApiServerThread(QThread):
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[logging.StreamHandler()]
         )
-        
+
         # Create a custom logging config for uvicorn
         log_config = {
             "version": 1,
@@ -82,7 +82,7 @@ class ApiServerThread(QThread):
                 "uvicorn.access": {"handlers": ["access"], "level": "INFO", "propagate": False}
             }
         }
-        
+
         self.config = uvicorn.Config(
             api_app,
             host="localhost",
@@ -236,7 +236,24 @@ class Application(QtWidgets.QMainWindow, Ui_MainWindow):
                 table_util.find_index_tbl(Constant.Profile.lbTableAction),
                 frame
             )
-        tb_object.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        tb_object.resizeColumnsToContents()
+        header = tb_object.horizontalHeader()
+        header.setSectionResizeMode(
+            table_util.find_index_tbl(column_name=Constant.Profile.lbTableProxy),
+            QHeaderView.ResizeMode.Stretch
+        )
+        header.setSectionResizeMode(
+            table_util.find_index_tbl(column_name=Constant.Base.lbCreatedAt),
+            QHeaderView.ResizeMode.Stretch
+        )
+        header.setSectionResizeMode(
+            table_util.find_index_tbl(column_name=Constant.Base.lbUpdatedAt),
+            QHeaderView.ResizeMode.Stretch
+        )
+        tb_object.setColumnWidth(
+            table_util.find_index_tbl(column_name=Constant.Profile.lbTableAction),
+            105
+        )
 
     def on_custom_context_menu_requested(self, pos):
         tb_object = self.UI.tableWidget

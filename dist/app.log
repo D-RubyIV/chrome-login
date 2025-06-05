@@ -1,2 +1,83 @@
 [31m2025-06-01 17:00:51 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
 [32m2025-06-01 17:00:51 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[32m2025-06-01 17:32:42 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:32:42 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:32:42 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 17:32:45 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:32:45 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:32:45 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 17:32:47 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:32:47 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:32:47 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 17:32:50 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:32:50 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:32:50 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 17:32:52 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:32:52 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:32:52 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 17:35:30 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:35:30 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:35:30 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-01 17:35:32 - my_logger - INFO - UPSERT[accounts] - Tổng số: 4[0m
+[32m2025-06-01 17:35:32 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 17:35:32 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-01 21:11:42 - my_logger - INFO - UPSERT[accounts] - Tổng số: 6[0m
+[32m2025-06-01 21:11:42 - my_logger - INFO - {'name': '74zD5swA6l', 'profile_path': 'm0wnrlj1d9-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '64ba76fd-66e9-4874-af50-3687e4438d12', 'created_time': datetime.datetime(2025, 6, 1, 16, 44, 56), 'updated_time': datetime.datetime(2025, 6, 1, 16, 44, 56)}[0m
+[32m2025-06-01 21:11:42 - my_logger - INFO - {'is_selected': True}[0m
+[31m2025-06-02 09:36:15 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:36:15 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 09:37:31 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:37:31 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 09:38:03 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:38:03 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 09:38:51 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:38:51 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 09:40:34 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:40:34 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 09:40:47 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:40:47 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 09:44:03 - my_logger - ERROR - Error in transactional function open_profile: 404: Profile không tồn tại[0m
+[32m2025-06-02 09:44:03 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[32m2025-06-02 10:02:08 - my_logger - INFO - UPSERT[accounts] - Tổng số: 9[0m
+[32m2025-06-02 10:02:08 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'dbmdjcehdw-01062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '0502ddef-8ec0-4f8c-9c66-734970684ab6', 'created_time': datetime.datetime(2025, 6, 1, 21, 11, 54), 'updated_time': datetime.datetime(2025, 6, 1, 21, 11, 54)}[0m
+[32m2025-06-02 10:02:08 - my_logger - INFO - {'is_selected': True}[0m
+[31m2025-06-02 10:12:07 - my_logger - ERROR - Error in transactional function open_profile: 500: Lỗi khi mở profile: ChromeDriver not found for Chrome version 136[0m
+[32m2025-06-02 10:12:07 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 10:12:17 - my_logger - ERROR - Error in transactional function open_profile: 500: Lỗi khi mở profile: ChromeDriver not found for Chrome version 136[0m
+[32m2025-06-02 10:12:17 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 10:13:06 - my_logger - ERROR - Error in transactional function open_profile: 500: Lỗi khi mở profile: ChromeDriver not found for Chrome version 136[0m
+[32m2025-06-02 10:13:06 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 10:15:56 - my_logger - ERROR - Error in transactional function open_profile: 500: Lỗi khi mở profile: ChromeDriver not found for Chrome version 136[0m
+[32m2025-06-02 10:15:56 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[31m2025-06-02 10:18:13 - my_logger - ERROR - Error in transactional function open_profile: 500: Lỗi khi mở profile: ChromeDriver not found for Chrome version 136[0m
+[32m2025-06-02 10:18:13 - my_logger - INFO - ===[TRANSACTIONAL ROLL BACK]===[0m
+[32m2025-06-02 10:21:33 - my_logger - INFO - UPSERT[accounts] - Tổng số: 5[0m
+[32m2025-06-02 10:21:33 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'mopxwlj1ab-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': 'f4dcb6e8-5f79-4746-bec8-1b255f1a6520', 'created_time': datetime.datetime(2025, 6, 2, 10, 10, 46), 'updated_time': datetime.datetime(2025, 6, 2, 10, 10, 46)}[0m
+[32m2025-06-02 10:21:33 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-02 11:51:09 - my_logger - INFO - UPSERT[accounts] - Tổng số: 11[0m
+[32m2025-06-02 11:51:09 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'ejhbjveqxz-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '0e8bb439-951b-4db2-b744-8bfaecc1f86c', 'created_time': datetime.datetime(2025, 6, 2, 10, 21, 3), 'updated_time': datetime.datetime(2025, 6, 2, 10, 21, 3)}[0m
+[32m2025-06-02 11:51:09 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-02 11:51:11 - my_logger - INFO - UPSERT[accounts] - Tổng số: 12[0m
+[32m2025-06-02 11:51:11 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'ejhbjveqxz-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '0e8bb439-951b-4db2-b744-8bfaecc1f86c', 'created_time': datetime.datetime(2025, 6, 2, 10, 21, 3), 'updated_time': datetime.datetime(2025, 6, 2, 10, 21, 3)}[0m
+[32m2025-06-02 11:51:11 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-02 14:03:42 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-02 14:03:42 - my_logger - INFO - {'name': 'TyjeVY0l6L', 'profile_path': 'vwcfof62je-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '25240fe6-51f8-4fd0-8bee-81a7bbfb29ed', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 14:03:42 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-02 16:39:33 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-02 16:39:33 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'eyxrlgdni5-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '26af77c1-2a64-4ea1-ab6a-3f46849c315c', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 16:39:33 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-02 17:30:32 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-02 17:30:32 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'eyxrlgdni5-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '26af77c1-2a64-4ea1-ab6a-3f46849c315c', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 17:30:32 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-02 17:31:04 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-02 17:31:04 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'eyxrlgdni5-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '26af77c1-2a64-4ea1-ab6a-3f46849c315c', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 17:31:04 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-02 17:31:05 - my_logger - INFO - UPSERT[accounts] - Tổng số: 1[0m
+[32m2025-06-02 17:31:05 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'eyxrlgdni5-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '26af77c1-2a64-4ea1-ab6a-3f46849c315c', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 17:31:05 - my_logger - INFO - {'is_selected': True}[0m
+[32m2025-06-02 17:33:14 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-02 17:33:14 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'eyxrlgdni5-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': False, 'id': '26af77c1-2a64-4ea1-ab6a-3f46849c315c', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 17:33:14 - my_logger - INFO - {'is_selected': False}[0m
+[32m2025-06-02 17:33:15 - my_logger - INFO - UPSERT[accounts] - Tổng số: 7[0m
+[32m2025-06-02 17:33:15 - my_logger - INFO - {'name': 'Test profile', 'profile_path': 'eyxrlgdni5-02062025', 'browser_version': '136.0.7103.114-64', 'raw_proxy': '', 'raw_note': '', 'is_selected': True, 'id': '26af77c1-2a64-4ea1-ab6a-3f46849c315c', 'created_time': datetime.datetime(2025, 6, 2, 11, 4, 48), 'updated_time': datetime.datetime(2025, 6, 2, 11, 4, 48)}[0m
+[32m2025-06-02 17:33:15 - my_logger - INFO - {'is_selected': True}[0m
